@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
+
+Route::get('/', [ContactController::class, 'index'])->name('index');
+Route::post('csv/export', [ContactController::class, 'csvExport'])->name('contact.csv.export');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
