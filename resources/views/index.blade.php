@@ -59,14 +59,14 @@
     <div class='row mb-3'>
       <!--datepicker-->
       <div class="col-md-5">
-        <input data-provide="datepicker" class="form-control datepicker js-start-date" type="datetime"
+        <input class="form-control datepicker js-start-date" type="datetime"
           placeholder="出力開始日" name="start_date" value="" dusk='datepicker_first'>
       </div>
       <div class="col-md-2 h2 d-flex justify-content-center align-items-center">
         〜
       </div>
       <div class="col-md-5">
-        <input data-provide="datepicker" class="form-control datepicker js-end-date" type="datetime" placeholder="出力終了日"
+        <input class="form-control datepicker js-end-date" type="datetime" placeholder="出力終了日"
           name="end_date" value="" dusk='datepicker_last'>
       </div>
     </div> <!-- row -->
