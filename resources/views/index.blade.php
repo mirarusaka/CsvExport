@@ -11,7 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/l10n/ja.js" defer></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="{{ asset('js/index.js') }}" defer></script>
+<script src="{{ mix('js/index.js') }}" defer></script>
 @endsection
 
 @section('content')
@@ -59,14 +59,14 @@
     <div class='row mb-3'>
       <!--datepicker-->
       <div class="col-md-5">
-        <input class="form-control datepicker js-start-date" type="datetime"
+        <input data-provide="datepicker" class="form-control datepicker js-start-date" type="datetime"
           placeholder="出力開始日" name="start_date" value="" dusk='datepicker_first'>
       </div>
       <div class="col-md-2 h2 d-flex justify-content-center align-items-center">
         〜
       </div>
       <div class="col-md-5">
-        <input class="form-control datepicker js-end-date" type="datetime" placeholder="出力終了日"
+        <input data-provide="datepicker" class="form-control datepicker js-end-date" type="datetime" placeholder="出力終了日"
           name="end_date" value="" dusk='datepicker_last'>
       </div>
     </div> <!-- row -->
