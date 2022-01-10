@@ -16,7 +16,7 @@ class ContactController extends Controller
             ->leftJoin('conditions', 'contacts.condition_id','=','conditions.id')
             ->leftJoin('designs', 'contacts.design_id','=','designs.id')
             ->orderBy('contacts.created_at', 'DESC')
-            ->get();
+            ->paginate(5);
 
         return view('index', compact('contacts'));
     }

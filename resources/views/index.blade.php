@@ -40,6 +40,7 @@
   @endforeach
   </tbody>
 </table>
+{{ $contacts->links() }}
 
 <div class="modal-container-import">
     <div class="modal-body-import">
