@@ -20,6 +20,7 @@ use App\Http\Controllers\ContactController;
 Auth::routes();
 
 Route::get('/', [ContactController::class, 'index'])->name('index');
+Route::post('csv/import', [ContactController::class, 'csvImport'])->name('contact.csv.import');
 Route::post('csv/export', [ContactController::class, 'csvExport'])->name('contact.csv.export');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
