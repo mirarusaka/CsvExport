@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Imports\CsvImport;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+use Maatwebsite\Excel\Facades\Excel;
+use Maatwebsite\Excel\Validators\ValidationException;
 
 class ContactController extends Controller
 {
@@ -55,7 +58,14 @@ class ContactController extends Controller
 
     public function csvImport(Request $request) {
 
-        dd($request);
+        $file = $request->file();
+
+        try {
+            $import = new CsvImport();
+            Excel::import($import, $file);
+        } catch (ValidationException $e) {
+            Log::alert($e->errors());
+        }
 
         return redirect('/');
     }
