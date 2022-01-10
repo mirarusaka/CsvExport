@@ -40,7 +40,8 @@
   @endforeach
   </tbody>
 </table>
-<div class="btn btn-primary modal-open">CSVエクスポート</div>
+<div class="btn btn-primary modal-open">データ入力</div>
+<div class="btn btn-primary modal-open">データ出力</div>
 
 <!-- remodal -->
 <div class="modal-container">
